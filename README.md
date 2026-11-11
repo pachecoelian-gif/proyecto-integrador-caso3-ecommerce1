@@ -1,13 +1,12 @@
 # Proyecto integrador — Caso 3: Comercio electrónico
 
-**Asignatura:** Bases de Datos · **Universidad:** Universidad Santo Tomás (Villavicencio)
-**Tecnologías:** Microsoft SQL Server (principal) + MongoDB (complementario)
+**Asignatura:** Bases de Datos · **Universidad:** Universidad Santo Tomás 
 
 ## 1. Equipo
 | Integrante | Rol principal | Usuario Git |
 |---|---|---|
-| Elian Santiago Pacheco Vanegas | _(completar)_ | _(completar)_ |
-| _(compañero)_ | _(completar)_ | _(completar)_ |
+| Elian Santiago Pacheco Vanegas | _Diseño y Prueba_ | _Pachecoelian-gif_ |
+| Ronald Andres Rodriguez | _Diseño_ | _Ronald3Rodriguez_ |
 
 ## 2. Descripción del caso
 Tienda digital que vende productos de distintas categorías y proveedores. Administra clientes, catálogo,
@@ -49,5 +48,4 @@ cada pedido. La gerencia analiza productos vendidos, clientes recurrentes y cump
 ## 7. Cómo comprobar la solución
 _(Pendiente Parte II: conteo de filas por tabla, pruebas válidas/inválidas en `documentacion/pruebas.md`.)_
 
-## 8. Declaración de uso de IA
-Ver `documentacion/uso_ia.md`.
+
