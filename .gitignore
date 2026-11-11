@@ -1,0 +1,10 @@
+# SO / editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+# Temporales
+*.bak
+*.ldf
+*.mdf
+~$*
