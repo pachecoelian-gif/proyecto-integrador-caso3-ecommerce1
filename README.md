@@ -41,6 +41,32 @@ cada pedido. La gerencia analiza productos vendidos, clientes recurrentes y cump
 3. `scripts/sqlserver/02_restricciones_y_reglas.sql`
 4. `scripts/sqlserver/03_datos_semilla.sql`
 5. `scripts/sqlserver/04_consultas_negocio.sql`
+## 7. Comprobación de que el montaje haya quedado bien
 
+Después de ejecutar los scripts en orden (`00` → `01` → `02` → `03`), ejecuta las siguientes consultas en SQL Server Management Studio para verificar que todo quedó correctamente instalado.
 
+## 7.1. Verificar que la base de datos existe
+`
+SELECT name, create_date 
+FROM sys.databases 
+WHERE name = 'ComercioElectronico';Debe devolver 1 fila`
+## 7.2. Verificar que existen las 10 tablas
+`SELECT TABLE_SCHEMA, TABLE_NAME
+FROM INFORMATION_SCHEMA.TABLES
+WHERE TABLE_TYPE = 'BASE TABLE'
+  AND TABLE_SCHEMA = 'dbo'
+ORDER BY TABLE_NAME;`
+## 7.3. Contar filas por tabla (todas ≥ 1.000)
+`SQLSELECT 'categoria'            AS tabla, COUNT(*) AS filas FROM dbo.categoria
+UNION ALL SELECT 'proveedor',          COUNT(*) FROM dbo.proveedor
+UNION ALL SELECT 'transportadora',     COUNT(*) FROM dbo.transportadora
+UNION ALL SELECT 'producto',           COUNT(*) FROM dbo.producto
+UNION ALL SELECT 'producto_proveedor', COUNT(*) FROM dbo.producto_proveedor
+UNION ALL SELECT 'cliente',            COUNT(*) FROM dbo.cliente
+UNION ALL SELECT 'pedido',             COUNT(*) FROM dbo.pedido
+UNION ALL SELECT 'detalle_pedido',     COUNT(*) FROM dbo.detalle_pedido
+UNION ALL SELECT 'pago',               COUNT(*) FROM dbo.pago
+UNION ALL SELECT 'despacho',           COUNT(*) FROM dbo.despacho
+ORDER BY tabla;
+`
 
