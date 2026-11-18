@@ -16,9 +16,9 @@ cada pedido. La gerencia analiza productos vendidos, clientes recurrentes y cump
 ## 3. Estado del proyecto
 | Fase | Entregable | Estado |
 |---|---|---|
-| Parte I (diseño) | Modelo E-R, modelo relacional, normalización 3FN, diccionario de datos | En desarrollo |
-| Parte II (SQL Server) | DDL, restricciones, datos semilla (≥1.000 por tabla), consultas, vistas, pruebas | Pendiente |
-| Complemento | Colección MongoDB `pedido_eventos` + CRUD | Pendiente |
+| Parte I (diseño) | Modelo E-R, modelo relacional, normalización 3FN, diccionario de datos | Completo |
+| Parte II (SQL Server) | DDL, restricciones, datos semilla (≥1.000 por tabla), consultas, vistas, pruebas | Completo |
+| Complemento | Colección MongoDB `pedido_eventos` + CRUD | Taller completo |
 
 ## 4. Estructura del repositorio
 ```
@@ -26,14 +26,13 @@ cada pedido. La gerencia analiza productos vendidos, clientes recurrentes y cump
 ├── modelo/                  # E-R, modelo relacional, diccionario de datos
 ├── scripts/
 │   ├── sqlserver/           # 00_reinicio ... 05_vistas
-│   └── mongodb/             # caso_03_funcionalidad.js
-├── documentacion/           # decisiones, reglas, pruebas, mongodb, uso de IA, bitácoras
+│   └── mongodb/             # Taller seccion 8
+├── documentacion/           # decisiones, uso de IA
 └── evidencias/capturas_o_resultados/
 ```
 
 ## 5. Requisitos de instalación
 - SQL Server 2019+ (o Express/Developer) y SQL Server Management Studio (SSMS)
-- MongoDB 6+ y `mongosh`
 - Git
 
 ## 6. Orden de ejecución (se completará en la Parte II)
@@ -42,10 +41,6 @@ cada pedido. La gerencia analiza productos vendidos, clientes recurrentes y cump
 3. `scripts/sqlserver/02_restricciones_y_reglas.sql`
 4. `scripts/sqlserver/03_datos_semilla.sql`
 5. `scripts/sqlserver/04_consultas_negocio.sql`
-6. `scripts/sqlserver/05_vistas.sql`
-7. `scripts/mongodb/caso_03_funcionalidad.js` → `mongosh < caso_03_funcionalidad.js`
 
-## 7. Cómo comprobar la solución
-_(Pendiente Parte II: conteo de filas por tabla, pruebas válidas/inválidas en `documentacion/pruebas.md`.)_
 
 
